@@ -6,7 +6,7 @@ var student = {
 document.addEventListener('DOMContentLoaded', contentLoaded);
 
 function contentLoaded(event){
-    document.getElementById('name').addEventListener("keyup", keyUp);
+    document.getElementById('fullname').addEventListener("keyup", keyUp);
 }
 
 function keyUp(event){
@@ -14,7 +14,7 @@ function keyUp(event){
 }
 
 function calculateNumericOutput(){
-    student.name = document.getElementById('name').value;
+    student.name = document.getElementById('fullname').value;
     
     var totalNameValue = 0;
     for (var i=0; i < student.name.length; i++){
