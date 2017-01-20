@@ -5,14 +5,14 @@ angular.module('LunchCheck', [])
     $scope.lunchMenu = "";
     $scope.msg = "";
     $scope.showMessage = function(){
-        if (lunchMenu === ""){
-            msg = "Please enter data first";
+        if ($scope.lunchMenu === ""){
+            $scope.msg = "Please enter data first";
         } else{
-            var arrLunchMenus = lunchMenu.split(',');
-            if (arrLunchMenus.length <= 3){
-                msg = "Enjoy!";
+            var arrLunchMenu = $scope.lunchMenu.split(',');
+            if (arrLunchMenu.length <= 3){
+                $scope.msg = "Enjoy!";
             } else{
-                msg = "Too much!";
+                $scope.msg = "Too much!";
             }
         }
         
